@@ -1,17 +1,9 @@
 package com.avanade.aplicacao;
 
 import com.avanade.aplicacao.servicos.ServicoProcessarArquivos;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
-import java.io.File;
-import java.io.FilenameFilter;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.text.MessageFormat;
-import java.util.Locale;
-
+@Slf4j
 public class Programa {
 
     /*Integer inteiro = 10;
@@ -21,7 +13,6 @@ public class Programa {
     Boolean boleano = false;
     String texto = null;*/
 
-    private static final Logger LOG = LoggerFactory.getLogger(Programa.class);
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("Parâmetro caminho obrigatório");
@@ -30,7 +21,7 @@ public class Programa {
             System.exit(-1);
             return;
         }
-        LOG.info("Iniciando aplicação..");
+        log.info("Iniciando aplicação..");
         //System.out.println("Iniciando aplicação..");
         //System.out.println("Caminho identificado " + args[0]);
         //System.out.println("Hello World!");
